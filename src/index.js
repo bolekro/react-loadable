@@ -158,7 +158,7 @@ function createLoadableComponent(loadFn, options) {
       return init();
     }
 
-    componentWillMount() {
+    UNSAFE_componentWillMount() {
       this._loadModule();
     }
 
@@ -222,7 +222,7 @@ function createLoadableComponent(loadFn, options) {
         });
     }
 
-    componentWillUnmount() {
+    UNSAFE_componentWillUnmount() {
       this._mounted = false;
       this._clearTimeouts();
     }
